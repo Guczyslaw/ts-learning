@@ -1,18 +1,30 @@
 function add(a: number, b: number) {
-  return 0
+  return a + b
 }
 
 // takes an array of numbers and returns a new array containing only the even numbers.
-function filterEvenNumber() {}
+function filterEvenNumber(numbers: number[]) {
+  return numbers.filter((number) => !(number % 2))
+}
 
 // takes a string and returns the reverse of the input string.
-function stringReversal() {}
+function stringReversal(text: string) {
+  return text.split('').reverse().join('')
+}
 
 // checks if a given string is a palindrome (reads the same backward as forward).
-function palindromeChecker() {}
+function palindromeChecker(text: string) {
+  return text === stringReversal(text)
+}
 
 // calculates the factorial of a given number. (5! = 1 * 2 * 3 * 4 * 5)
-function factorial() {}
+function factorial(number: number) {
+  let result = 1
+  for (let i = 1; i <= number; i++) {
+    result *= i
+  }
+  return result
+}
 
 // takes a number as input and returns "Fizz" if the number is divisible by 3, "Buzz" if divisible by 5, "FizzBuzz" if divisible by both 3 and 5, or the number itself if none of these conditions are met.
 function fizzBuzz() {}
@@ -64,4 +76,4 @@ function chunkArray() {}
 // checks if a given string has all unique characters (no duplicates)
 function hasUniqueCharacters() {}
 
-export { add }
+export { add, filterEvenNumber, stringReversal, palindromeChecker, uniqueElements, factorial }
